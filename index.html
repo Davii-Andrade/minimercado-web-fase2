@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperMarket</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">SuperMarket</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Alimentos</a></li>
+            <li><a class="dropdown-item" href="#">Higiene</a></li>
+            <li><a class="dropdown-item" href="#">Limpeza</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <button class="btn btn-outline-light me-2" onclick="abrirLogin()">Entrar</button>
+        <button class="btn btn-success" onclick="abrirCadastro()">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Carrossel -->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/arroz-feijao.jfif" class="d-block w-100" alt="Arroz e Feijão">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Primeiro slide</h5>
+        <p>Arroz e feijão fresquinhos.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/frutas.jfif" class="d-block w-100" alt="Frutas">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Segundo slide</h5>
+        <p>Frutas selecionadas.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/limpeza.jfif" class="d-block w-100" alt="Limpeza">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Terceiro slide</h5>
+        <p>Produtos de limpeza.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/higiene.png" class="d-block w-100" alt="Higiene">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Quarto slide</h5>
+        <p>Produtos de higiene pessoal.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- Produtos -->
+<div class="container my-5">
+  <h1 class="mb-4">Produtos</h1>
+  <div class="row g-4">
+    <!-- Produto 1 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/PERA.jfif" class="card-img-top" alt="Pêra">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pêra</h5>
+          <p class="card-text">Categoria: Hortifruti</p>
+          <p class="text-success fw-bold">R$ 15,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Produto 2 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/MACA.jfif" class="card-img-top" alt="Maçã">
+        <div class="card-body text-center">
+          <h5 class="card-title">Maçã</h5>
+          <p class="card-text">Categoria: Hortifruti</p>
+          <p class="text-success fw-bold">R$ 15,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Produto 3 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/SHAMPOO.jfif" class="card-img-top" alt="Shampoo">
+        <div class="card-body text-center">
+          <h5 class="card-title">Shampoo</h5>
+          <p class="card-text">Categoria: Higiene</p>
+          <p class="text-success fw-bold">R$ 30,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Produto 4 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/SABONETE.jfif" class="card-img-top" alt="Sabonete">
+        <div class="card-body text-center">
+          <h5 class="card-title">Sabonete</h5>
+          <p class="card-text">Categoria: Higiene</p>
+          <p class="text-success fw-bold">R$ 25,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Produto 5 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/ESPONJA.jfif" class="card-img-top" alt="Esponja">
+        <div class="card-body text-center">
+          <h5 class="card-title">Esponja</h5>
+          <p class="card-text">Categoria: Limpeza</p>
+          <p class="text-success fw-bold">R$ 05,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Produto 6 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="images/PALHA-ACO.jfif" class="card-img-top" alt="Palha de aço">
+        <div class="card-body text-center">
+          <h5 class="card-title">Palha de aço</h5>
+          <p class="card-text">Categoria: Limpeza</p>
+          <p class="text-success fw-bold">R$ 05,00</p>
+          <a href="compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light pt-4 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sobre -->
+      <div class="col-md-4 mb-3">
+        <h5>SuperMarket</h5>
+        <p>O melhor lugar para suas compras rápidas e práticas. Retirada no local ou tele-entrega.</p>
+      </div>
+
+      <!-- Links rápidos -->
+      <div class="col-md-4 mb-3">
+        <h5>Links rápidos</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="entrar.html" class="text-light text-decoration-none">Entrar</a></li>
+          <li><a href="cadastro.html" class="text-light text-decoration-none">Cadastro</a></li>
+          <li><a href="compra.html" class="text-light text-decoration-none">Comprar</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="col-md-4 mb-3">
+        <h5>Contato</h5>
+        <p>Email: contato@supermarket.com</p>
+        <p>Telefone: (51) 99999-9999</p>
+        <div>
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="mb-0">&copy; 2025 SuperMarket. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
